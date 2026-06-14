@@ -12,13 +12,9 @@ source:
 build:
   number: 0
   skip: true  # [not win]
-
-outputs:
-  - name: dirent
-    script: bld.bat
-    test:
-      commands:
-        - if not exist "%LIBRARY_INC%\\dirent.h" exit 1  # [win]
+test:
+  commands:
+    - if not exist "%LIBRARY_INC%\\dirent.h" exit 1  # [win]
 
 about:
   home: https://github.com/tronkko/dirent
