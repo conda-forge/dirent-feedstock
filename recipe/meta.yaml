@@ -1,14 +1,12 @@
-{% set name = "dirent" %}
 {% set version = "1.26" %}
 {% set sha256 = "a91662ee5243d2dae5aee7ed8527f95097afda517cc5cc7ca2699648a74a419c" %}
 
 package:
-  name: {{ name|lower }}
+  name: dirent
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/tronkko/{{ name }}/archive/refs/tags/{{ fn }}
+  url: https://github.com/tronkko/dirent/archive/refs/tags/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
