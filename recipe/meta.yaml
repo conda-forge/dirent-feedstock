@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.zip
-  url: https://github.com/tronkko/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/tronkko/{{ name }}/archive/refs/tags/{{ fn }}
   sha256: {{ sha256 }}
 
 build:
