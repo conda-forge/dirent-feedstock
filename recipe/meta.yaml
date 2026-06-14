@@ -25,10 +25,10 @@ test:
 about:
   home: https://github.com/tronkko/dirent
   license: MIT
+  license_file: src/LICENSE
   summary: Dirent interface for Microsoft Visual Studio
 
 extra:
   recipe-maintainers:
     - jakirkham
     - willend
-
