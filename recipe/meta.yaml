@@ -3,7 +3,7 @@
 
 package:
   name: dirent
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://github.com/tronkko/dirent/archive/refs/tags/{{ version }}.tar.gz
