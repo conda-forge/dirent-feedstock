@@ -1,14 +1,13 @@
 {% set name = "dirent" %}
-{% set version = "1.21" %}
-{% set sha256 = "b5214abdd138056f893bad41e6f15081cb454304df9432c1d233e5a68eddf839" %}
+{% set version = "1.26" %}
+{% set sha256 = "a91662ee5243d2dae5aee7ed8527f95097afda517cc5cc7ca2699648a74a419c" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
-  fn: {{ name }}-{{ version }}.zip
-  url: https://softagalleria.net/download/dirent/dirent-{{ version }}.zip
+  url: https://github.com/tronkko/dirent/archive/refs/tags/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -23,11 +22,12 @@ test:
     - if not exist "%LIBRARY_INC%\\dirent.h" exit 1       # [win]
 
 about:
-  home: https://softagalleria.net/dirent.php
+  home: https://github.com/tronkko/dirent
   license: MIT
-  # No license file, unfortunately.
+  license_file: LICENSE
   summary: Dirent interface for Microsoft Visual Studio
 
 extra:
   recipe-maintainers:
     - jakirkham
+    - willend
