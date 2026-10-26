@@ -1,0 +1,36 @@
+schema_version: 1
+
+context:
+  version: "1.26"
+
+package:
+  name: dirent
+  version: ${{ version }}
+
+source:
+  url: https://github.com/tronkko/dirent/archive/refs/tags/${{ version }}.tar.gz
+  sha256: a91662ee5243d2dae5aee7ed8527f95097afda517cc5cc7ca2699648a74a419c
+
+build:
+  number: 1
+  skip: not win
+  script:
+    - if not exist "%LIBRARY_INC%" mkdir "%LIBRARY_INC%"
+    - copy "include\dirent.h" "%LIBRARY_INC%\"
+
+tests:
+  - package_contents:
+      include:
+        - dirent.h
+
+about:
+  homepage: https://github.com/tronkko/dirent
+  license: MIT
+  license_file: LICENSE
+  summary: Dirent interface for Microsoft Visual Studio
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - willend
+    - pavelzw
